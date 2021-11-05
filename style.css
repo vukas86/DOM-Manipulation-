@@ -432,7 +432,7 @@ div .btn4 {
 }
 
 .aboutSticker {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   height: 150px;
@@ -441,7 +441,8 @@ div .btn4 {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   transform: translate(280px, -345px);
-  overflow: hidden;
+  font-size: 0px;
+  line-height: 1;
 }
 
 .aboutSticker img {
@@ -452,7 +453,9 @@ div .btn4 {
   padding: 5px;
   margin: 0 auto;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .aboutSticker img:hover {
+  background-color: #18d541;
 }

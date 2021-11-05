@@ -64,3 +64,17 @@ container3.addEventListener("click", function (e) {
     .querySelector(`.container3-content-${clickedBtn.dataset.btns}`)
     .classList.remove("container3-content-active");
 });
+
+// ---INFO BANNER---
+
+document.querySelector(".chris").onmouseover = function () {
+  document.querySelector(".aboutSticker").style.display = "flex";
+};
+
+document.querySelector(".aboutSticker").onmouseover = function () {
+  document.querySelector(".aboutSticker").style.display = "flex";
+};
+
+document.querySelector(".chris").onmouseout = function () {
+  document.querySelector(".aboutSticker").style.display = "none";
+};
