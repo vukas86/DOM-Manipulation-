@@ -19,15 +19,16 @@
     <title>Tabbed Component</title>
   </head>
   <body>
-    <header>
+    <a name="top" id="top"></a>
+    <header id="header">
       <a href="#"
         ><img src="images/logos/logo-removebg-preview.png" alt="logo"
       /></a>
       <nav>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Our Team</a></li>
+        <li><a href="#top" class="nav_item">Home</a></li>
+        <li><a href="#operations" class="nav_item">Services</a></li>
+        <li><a href="#contact" class="nav_item">Contact</a></li>
+        <li><a href="#team" class="nav_item">Our Team</a></li>
       </nav>
     </header>
 
@@ -176,7 +177,7 @@
       </div>
     </section>
 
-    <section class="container3">
+    <section class="container3" id="contact">
       <div class="container3_btns">
         <button class="btn3 container3_btn-active" data-btns="1">
           <img
@@ -327,7 +328,7 @@
         </form>
       </div>
     </section>
-    <section class="team">
+    <section class="team" id="team">
       <div class="banner"><h1>Meet Our Team</h1></div>
       <div class="people">
         <div class="person">
@@ -383,6 +384,22 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div id="footer">
+        <div class="logo">
+          <img src="images/logos/logo-removebg-preview.png" alt="logo" />
+        </div>
+        <div class="terms">
+          &#169; 2021 justwedding.
+          <span><a href="#">Privacy</a> <a href="#">Policy</a></span>
+        </div>
+        <div class="logos">
+          <img src="icons/face.svg" alt="face" height="20" width="20" />
+          <img src="icons/twitt.svg" alt="twitter" height="20" width="20" />
+          <img src="icons/insta.svg" alt="insta" height="20" width="20" />
+        </div>
+      </div>
+    </footer>
     <script src="scrypt.js"></script>
     <script src="main.js"></script>
   </body>

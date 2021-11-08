@@ -2,9 +2,17 @@ const tabs = document.querySelectorAll(".operations_tab");
 const tabsContainer = document.querySelector(".operations-container");
 const tabsContent = document.querySelectorAll(".operations_content");
 
+document.querySelector("#header").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains("nav_item")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
+
 tabsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".operations_tab");
-  console.log(clicked);
 
   if (!clicked) return;
 
@@ -25,7 +33,6 @@ const containerContent = document.querySelectorAll(".container-content");
 
 container2.addEventListener("click", function (el) {
   const clickedBtn = el.target.closest(".btn2");
-  console.log(clickedBtn);
 
   if (!clickedBtn) return;
 
@@ -49,7 +56,6 @@ const container3Content = document.querySelectorAll(".container3-content");
 
 container3.addEventListener("click", function (e) {
   const clickedBtn = e.target.closest(".btn3");
-  console.log(clickedBtn);
 
   if (!clickedBtn) return;
 
