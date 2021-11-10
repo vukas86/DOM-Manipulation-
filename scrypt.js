@@ -1,6 +1,7 @@
 const tabs = document.querySelectorAll(".operations_tab");
 const tabsContainer = document.querySelector(".operations-container");
 const tabsContent = document.querySelectorAll(".operations_content");
+const nav = document.querySelector(".nav");
 
 document.querySelector("#header").addEventListener("click", function (e) {
   e.preventDefault();
@@ -11,6 +12,23 @@ document.querySelector("#header").addEventListener("click", function (e) {
   }
 });
 
+const handleHover = function (e) {
+  if (e.target.classList.contains("nav_item")) {
+    const link = e.target;
+    const siblings = link.closest(".nav").querySelectorAll(".nav_item");
+    /* const logo = link.closest(".nav").querySelector("img"); */
+
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = this;
+    });
+    /* logo.style.opacity = this; */
+  }
+};
+
+nav.addEventListener("mouseover", handleHover.bind(0.5));
+nav.addEventListener("mouseout", handleHover.bind(1));
+
+//
 tabsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".operations_tab");
 
