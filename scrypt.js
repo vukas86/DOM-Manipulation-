@@ -1,3 +1,4 @@
+"use strict";
 const tabs = document.querySelectorAll(".operations_tab");
 const tabsContainer = document.querySelector(".operations-container");
 const tabsContent = document.querySelectorAll(".operations_content");
@@ -102,3 +103,23 @@ document.querySelector(".aboutSticker").onmouseover = function () {
 document.querySelector(".chris").onmouseout = function () {
   document.querySelector(".aboutSticker").style.display = "none";
 };
+
+// ---STICKY NAV---
+
+const navHeight = nav.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+};
+
+const navObser = new IntersectionObserver(stickyNav, {
+  root: null,
+  treshold: 1,
+  rootMargin: `-${navHeight}px`,
+});
+navObser.observe(nav);
